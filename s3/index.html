@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `s3` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, s3">
+
+    <title>s3 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 's3', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>s3</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/s3/src/lib.rs.html#1-687' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Simple access to Amazon Web Service&#39;s (AWS) Simple Storage Service (S3)</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='signing/index.html'
+                                  title='s3::signing'>signing</a></td>
+                           <td class='docblock-short'>
+                                <p>Implementation of <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">AWS V4 Signing</a></p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Bucket.html'
+                                  title='s3::Bucket'>Bucket</a></td>
+                           <td class='docblock-short'>
+                                <p>Object holding info about an S3 bucket which provides easy access to S3
+operations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CommonPrefix.html'
+                                  title='s3::CommonPrefix'>CommonPrefix</a></td>
+                           <td class='docblock-short'>
+                                <p>CommonPrefix is used to group keys</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Credentials.html'
+                                  title='s3::Credentials'>Credentials</a></td>
+                           <td class='docblock-short'>
+                                <p>AWS access credentials: access key, secret key, and optional token.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ListBucketResult.html'
+                                  title='s3::ListBucketResult'>ListBucketResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The parsed result of a s3 bucket listing</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Object.html'
+                                  title='s3::Object'>Object</a></td>
+                           <td class='docblock-short'>
+                                <p>An individual object in a ListBucketResult</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Owner.html'
+                                  title='s3::Owner'>Owner</a></td>
+                           <td class='docblock-short'>
+                                <p>Owner information for the object</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.S3RegionParseError.html'
+                                  title='s3::S3RegionParseError'>S3RegionParseError</a></td>
+                           <td class='docblock-short'>
+                                <p>Error raised when a string cannot be parsed to a valid
+<a href="enum.Region.html"><code>Region</code></a>.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Region.html'
+                                  title='s3::Region'>Region</a></td>
+                           <td class='docblock-short'>
+                                <p>AWS S3 <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">region identifier</a></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.S3Error.html'
+                                  title='s3::S3Error'>S3Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors raised by the libray when performing generic operations.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Headers.html'
+                                  title='s3::Headers'>Headers</a></td>
+                           <td class='docblock-short'>
+                                <p>Collection of HTTP headers sent to S3 service, in key/value format.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Query.html'
+                                  title='s3::Query'>Query</a></td>
+                           <td class='docblock-short'>
+                                <p>Collection of HTTP query parameters sent to S3 service, in key/value
+format.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.S3Result.html'
+                                  title='s3::S3Result'>S3Result</a></td>
+                           <td class='docblock-short'>
+                                <p>Generic return type of S3 functions.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "s3";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
